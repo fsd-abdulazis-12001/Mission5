@@ -19,15 +19,14 @@ const Header = () => {
 
   return (
     <header className="bg-gray-900 text-white flex items-center justify-between px-12 py-4">
-      <div className="flex items-center space-x-11">
+      <div className="flex items-center space-x-5 md:space-x-11">
         <Logonya />
         <button onClick={toggleNav} className="focus:outline-none md:hidden">
           {navOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
         </button>
-        <nav className={`md:flex space-x-11 ${navOpen ? 'block' : 'hidden'} md:block`}>
-          <a href="#series" className="hover:underline">Series</a>
-          <a href="#films" className="hover:underline">Film</a>
-          
+        <nav className={`md:flex space-x-2 sm:space-x-11 ${navOpen ? 'block' : 'hidden'}  `}>
+          <Link to="/series" className="hover:underline">Series</Link>
+          <Link to="/films" className="hover:underline">Film</Link>
           <Link to="/daftarsaya" className="hover:underline">Daftar Saya</Link>
         </nav>
       </div>

@@ -2,7 +2,7 @@
 import React from 'react'
 
 import googleIcon from '../../../assets/img/icon/google.png';
-import InputForm from '../Elements/Input';
+import InputForm from '../Elements/InputAuth';
 import Button from '../Elements/Button';
 const FormLogin = () => {
   return (

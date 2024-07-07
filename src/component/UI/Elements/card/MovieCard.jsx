@@ -15,9 +15,10 @@ const MovieCard = (props) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className={`h-full object-cover transition-transform duration-300 ${style === "box-panjang" ? isHovered ? 'translate-y-[-15%] scale-x-[140%]' : '' : isHovered ? 'scale-[110%] translate-y-[-50%]' : ''} ${index === 0 && isHovered && 'translate-x-[5%]'}`}>
-        <div className={`relative w-full h-full transition-height duration-300 ${style === "box-panjang" && isHovered && 'object-fill object-cover h-[75%]'}`}>
+        <div className={`relative w-full h-full transition-height duration-300 ${style === "box-panjang" && isHovered && 'object-fill object-cover h-[70%]'}`}>
           {label === "Top 10" && <span className="absolute top-0 right-2 p-2 w-8 h-18 rounded-md text-center bg-[#B71F1D] text-white text-xs text-center font-bold">{label}</span>}
           {label === "new Episode" && <span className="absolute top-3 left-3 p-2 w-auto h-18 rounded-xl text-center bg-[#0F1E93] text-white text-xs font-bold">{label}</span>}
+          {label === "Premium" && <span className="absolute top-3 left-3 p-2 w-auto h-18 rounded-xl text-center bg-[#B7A207] text-white text-xs font-bold">{label}</span>}
 
           <img src={image} alt={title} className={`object-cover w-full h-full rounded-md ${isHovered && 'rounded-b-none ' }`} />
         </div>

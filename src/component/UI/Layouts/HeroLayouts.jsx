@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { IoVolumeMute } from "react-icons/io5";
-const HeroLayouts = ({bgimage , title, description}) => {
+import GenreDropdown from '../../../component/UI/Elements/dropdown/GenreDropDown';
+const HeroLayouts = ({bgimage , title, description , genres}) => {
   return (
     <div className="relative bg-gray-900 text-white h-[587px]">
     <img
@@ -8,9 +11,17 @@ const HeroLayouts = ({bgimage , title, description}) => {
       alt={bgimage.alt}
       className="absolute w-full h-full object-cover"
     />
+   
     <div className="absolute inset-0 bg-gradient-to-t from-[#181A1C] to-transparent h-full"></div>
-    <div className="flex justify-center relative h-full items-end pb-16">
+    
+    <div className="relative flex justify-center relative h-full items-end pb-16">
+    <div className="absolute invisible top-10 w-11/12 mb-4 sm:visible">
+    {genres &&  <GenreDropdown genres = {genres}/>}
+   
+    </div>
+  
       <div className="w-11/12 mb-4">
+     
         <div className="text-left max-w-2xl mb-4">
           <h1 className="text-4xl font-bold mb-4">{title}</h1>
           <p className="mb-4">
