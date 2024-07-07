@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Swiper } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import "swiper/css";

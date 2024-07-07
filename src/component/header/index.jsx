@@ -43,18 +43,21 @@ const Header = () => {
         </button>
         {dropdownOpen && (
           <div className="absolute right-0 mt-2 w-48 bg-gray-900 text-white rounded-md shadow-lg py-2 z-10">
-            <a href="#profile" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
-              <FaUser />
-              <span>Profil Saya</span>
-            </a>
-            <a href="#upgrade" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
-              <FaStar />
-              <span>Ubah Premium</span>
-            </a>
-            <a href="#logout" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
-              <FaSignOutAlt />
-              <span>Keluar</span>
-            </a>
+               <Link to="/profile" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
+                  <FaUser />
+                  <span>Profil Saya</span>
+               </Link>
+           
+               <Link to="/upgrade" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
+                  <FaStar />
+                  <span>Ubah Premium</span>
+               </Link>
+
+               <Link to="/login" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
+                  <FaSignOutAlt />
+                  <span>Keluar</span>
+               </Link>
+            
           </div>
         )}
       </div>

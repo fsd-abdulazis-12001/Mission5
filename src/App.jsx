@@ -10,6 +10,7 @@ import BerandaPage from "./pages/beranda"
 import DaftarSaya from "./pages/beranda/DaftarSaya";
 import Series from "./pages/beranda/Series";
 import Films from "./pages/beranda/Films";
+import Profile from "./pages/auth/Profile";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
   {
     path: "/films",
     element: <Films/>,
+  }
+  ,
+  {
+    path: "/profile",
+    element: <Profile/>,
   }
 ]);
 function App() {
