@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import CheckIcon from '@mui/icons-material/Check';
 const PaketCard = ({tipenya}) => {
+    const navigate = useNavigate();
   return (
     <div className='bg-gradient-to-r from-[#5370D4] to-[#192DB7] w-[236px] h-[400px] rounded-md flex flex-col justify-start items-center transition-transform duration-300 hover:scale-110'>
         <div className='flex flex-col justify-start items-start p-4 w-[95%] gap-5'>
@@ -39,7 +41,7 @@ const PaketCard = ({tipenya}) => {
 
             </div>
             <div className='flex flex-col justify-start items-start w-full gap-2 pt-4'>
-                <button className='text-[#0F1E93] font-bold text-xl rounded-full bg-white px-2 w-full h-[40px]'>Langganan</button>
+                <button className='text-[#0F1E93] font-bold text-xl rounded-full bg-white px-2 w-full h-[40px]' onClick={() => {navigate(`/payment/${tipenya}`)}}>Langganan</button>
                 <p className='text-white text-sm font-sm text-center w-full'>Syarat dan Ketentuan Berlaku</p>
             </div>
         </div>

@@ -12,6 +12,7 @@ import Series from "./pages/beranda/Series";
 import Films from "./pages/beranda/Films";
 import Profile from "./pages/auth/Profile";
 import Langganan from "./pages/langganan";
+import Payment from "./pages/payment";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
   {
     path: "/subscribe",
     element: <Langganan/>,
+  }
+  ,
+  {
+    path: "/payment/:id",
+    element: <Payment/>,
   }
 ]);
 function App() {

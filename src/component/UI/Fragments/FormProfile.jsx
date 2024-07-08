@@ -63,7 +63,7 @@ const FormProfile = ({height , title}) => {
         
       </div>
 
-      <div className='w-[80%] sm:w-[50%]  h-full flex flex-col justify-start gap-9 sm:order-1 order-2'>
+      <div className='w-[80%] lg:w-[50%]  h-full flex flex-col justify-start gap-9 sm:order-1 order-2'>
         <div className='w-[287px] h-[140px] flex justify-start'>
           <Stack direction="row" spacing={2}>
             <Avatar

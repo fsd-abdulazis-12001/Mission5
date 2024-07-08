@@ -18,7 +18,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-900 text-white flex items-center justify-between px-12 py-4">
+    <div className="w-full bg-[#181A1C] text-white flex items-center justify-center">
+      <header className="w-[95%] bg-[#181A1C] text-white flex items-center justify-between px-5 py-4 ">
       <div className="flex items-center space-x-5 md:space-x-11">
         <Logonya />
         <button onClick={toggleNav} className="focus:outline-none md:hidden">
@@ -61,8 +62,10 @@ const Header = () => {
           </div>
         )}
       </div>
-    </header>
-  );
-};
+      </header>
+    </div>
+   
+  )
+}
 
 export default Header;
