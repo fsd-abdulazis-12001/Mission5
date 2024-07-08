@@ -10,7 +10,7 @@ const Profile = () => {
        <Header />
 
        <FormProfile height = "h-[850px]" title = "Profile Saya" />
-       <DaftarSayaFragments>
+       <DaftarSayaFragments title="Daftar Saya">
             {daftarSaya.slice(0, 6).map((movie, index) => (
                  <CardThumbnail key={index} {...movie}/>
             ))}

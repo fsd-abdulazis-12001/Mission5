@@ -48,7 +48,7 @@ const Header = () => {
                   <span>Profil Saya</span>
                </Link>
            
-               <Link to="/upgrade" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
+               <Link to="/subscribe" className="block px-4 py-2 flex items-center space-x-2 hover:text-blue-500">
                   <FaStar />
                   <span>Ubah Premium</span>
                </Link>

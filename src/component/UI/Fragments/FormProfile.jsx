@@ -75,7 +75,7 @@ const FormProfile = ({height , title}) => {
           </Stack>
         </div>
 
-        <InputProfile type="nama" placeholder="William" label="Name Pengguna" />
+        <InputProfile type="nama" placeholder="Abdul Azis 12001" label="Name Pengguna" />
         <InputProfile type="email" placeholder="william1980@gmail.com" label="Email" />
         <InputProfile type="password" placeholder="********" label="Kata Sandi" />
       </div>

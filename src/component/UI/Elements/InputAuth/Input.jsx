@@ -2,7 +2,7 @@
 import { useState} from 'react'
 
 const Input = (props) => {
-    const {placeholder ,type, name} = props
+    const {placeholder ,type, name, required} = props
     const [inputType, setInputType] = useState(type);
 
     const togglePasswordVisibility = () => {
@@ -15,6 +15,7 @@ const Input = (props) => {
         className="w-full px-4 py-2 mt-1 bg-gray-700 bg-opacity-10 outline-white rounded-full border border-gray-700 hover:ring-ring-gray focus:outline-none focus:ring-2 focus:ring-blue-500"
         placeholder={placeholder}
         name={name}
+        required={required}
       />
       {type === 'password' && (
         <span

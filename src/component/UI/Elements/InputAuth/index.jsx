@@ -4,11 +4,11 @@ import Label from "./Label"
 
  
 const Index = (props) => {
-    const { htmlFor, placeholder ,label, type } = props
+    const { htmlFor, placeholder ,label, type , isrequired } = props
   return (
     <div className="mb-4">
-      <Label htmlFor={htmlFor}/>{label}<Label/>
-      <Input placeholder={placeholder} type={type} />
+      <Label htmlFor={htmlFor} />{label}<Label/>
+      <Input placeholder={placeholder}  required={isrequired} type={type} />
       
     </div>
   )
