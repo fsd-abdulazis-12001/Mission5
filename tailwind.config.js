@@ -9,6 +9,10 @@ export default {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
       },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
       colors: {
         'semi-gray': '#C1C2C4',
         'bg-gray': '#181A1C',

@@ -4,23 +4,40 @@ import { FaStar, FaPlay, FaCheck  } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import formatwaktu from '../../../../utils/formatwaktu';
 import { useState } from "react";
+import FilmmModal from '../FilmModal';
 const MovieCard = (props) => {
   const { style, index, type, title, image, rating, eps, duration, progress, totaleps, category, label } = props;
   const [isHovered, setIsHovered] = useState(false);
+  const handleHover = (hover) => {
+    setOpen(false)
+    setIsHovered(hover)
+  }
+
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    setOpen(false)
+    setIsHovered(false)
+  };
 
   return (
+    
     <div
+    
       className="relative h-full"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => handleHover(true)}
+      onMouseLeave={() => handleHover(false)}
     >
-      <div className={`h-full object-cover transition-transform duration-300 ${style === "box-panjang" ? isHovered ? 'translate-y-[-15%] scale-x-[140%]' : '' : isHovered ? 'scale-[110%] translate-y-[-50%]' : ''} ${index === 0 && isHovered && 'translate-x-[5%]'}`}>
-        <div className={`relative w-full h-full transition-height duration-300 ${style === "box-panjang" && isHovered && 'object-fill object-cover h-[65%]'}`}>
+     <FilmmModal open={open} handleClose={handleClose} title={title} image={image} >
+      </FilmmModal>
+      <div className={`h-full object-cover transition-transform duration-300 ${style === "box-panjang" ? isHovered ? 'scale-[120%] translate-y-[-60%]' : '' : isHovered ? 'scale-[110%] translate-y-[-50%]' : ''} ${index === 0 && isHovered && 'translate-x-[5%]'}`}>
+        <div className={`relative w-full h-full transition-transform origin-bottom duration-300 ${style === "box-panjang" && isHovered && 'w-full scale-y-[65%]'}`}>
           {label === "Top 10" && <span className="absolute top-0 right-2 p-2 w-8 h-18 rounded-md text-center bg-[#B71F1D] text-white text-xs text-center font-bold">{label}</span>}
           {label === "new Episode" && <span className="absolute top-3 left-3 p-2 w-auto h-18 rounded-xl text-center bg-[#0F1E93] text-white text-xs font-bold">{label}</span>}
           {label === "Premium" && <span className="absolute top-3 left-3 p-2 w-auto h-18 rounded-xl text-center bg-[#B7A207] text-white text-xs font-bold">{label}</span>}
 
-          <img src={image} alt={title} className={`object-cover w-full h-full rounded-md ${isHovered && 'rounded-b-none ' }`} />
+          <img src={image} alt={title} className={`object-cover w-full h-full rounded-md ${style === "box-panjang" && isHovered && 'object-cover  rounded-b-none ' }`} />
         </div>
 
         {style === "box" &&
@@ -52,9 +69,9 @@ const MovieCard = (props) => {
               </div>
               <div
                 className="cursor-pointer w-8 h-8 lg:w-10 lg:h-10 bg-opacity-0 rounded-full border flex items-center justify-center transition hover:bg-gray-300"
-                onClick={() => { }}
+                onClick={handleOpen}
               >
-                <IoIosArrowDown className="text-white" />
+                <IoIosArrowDown className="text-white"  />
               </div>
             </div>
             <div className="w-full pt-4 ">
@@ -93,7 +110,7 @@ const MovieCard = (props) => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default MovieCard

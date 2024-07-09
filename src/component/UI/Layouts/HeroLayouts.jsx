@@ -12,7 +12,9 @@ const HeroLayouts = ({bgimage , title, description , genres}) => {
       className="absolute w-full h-full object-cover"
     />
    
-    <div className="absolute inset-0 bg-gradient-to-t from-[#181A1C] to-transparent h-full"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-[#181A1C] to-transparent h-full">
+      
+    </div>
     
     <div className="relative flex justify-center relative h-full items-end pb-16">
     <div className="absolute invisible top-10 w-11/12 mb-4 sm:visible">
