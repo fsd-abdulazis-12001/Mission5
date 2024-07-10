@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
-import PaketCard from '../Elements/card/PaketCard'
+import PaketCard from '../Elements/Card/PaketCard'
 import { useParams } from 'react-router-dom';
 
 const PaymentSummary = () => {

@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { IoVolumeMute } from "react-icons/io5";
-import GenreDropdown from '../../../component/UI/Elements/dropdown/GenreDropDown';
+import GenreDropdown from '../../../component/UI/Elements/Dropdown/GenreDropDown';
 const HeroLayouts = ({bgimage , title, description , genres}) => {
   return (
     <div className="relative bg-gray-900 text-white h-[587px]">
@@ -26,7 +26,7 @@ const HeroLayouts = ({bgimage , title, description , genres}) => {
      
         <div className="text-left max-w-2xl mb-4">
           <h1 className="text-4xl font-bold mb-4">{title}</h1>
-          <p className="mb-4">
+          <p className="mb-4 min lg:line-clamp-4 line-clamp-2">
           {description}
           </p>
         </div>

@@ -3,7 +3,7 @@
 import Header from '../../component/header';
 import Footer from '../../component/footer';
 import CardsLayouts from '../../component/UI/Layouts/CardsLayouts';
-import MovieCard from '../../component/UI/Elements/card/MovieCard';
+import MovieCard from '../../component/UI/Elements/Card/MovieCard';
 
 import { SwiperSlide } from 'swiper/react';
 import HeroLayouts from '../../component/UI/Layouts/HeroLayouts';

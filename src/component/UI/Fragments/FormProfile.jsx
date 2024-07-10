@@ -4,7 +4,7 @@ import React from 'react'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import ButtonEditPhoto from '../Elements/Button/ButtonEditPhoto';
-import InputProfile from '../Elements/inputProfile';
+import InputProfile from '../Elements/InputProfile';
 import { useState } from 'react';
 const FormProfile = ({height , title}) => {
   const [isPremium, setIsPremium] = useState(false);

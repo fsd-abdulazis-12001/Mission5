@@ -1,5 +1,5 @@
 import DaftarSayaFragments from '../../component/UI/Fragments/DaftarSayaFragments'
-import CardThumbnail from '../../component/UI/Elements/card/CardThumbnail'
+import CardThumbnail from '../../component/UI/Elements/Card/CardThumbnail'
 import daftarSaya from '../../component/constants/daftarSaya';
 import Header from '../../component/header'
 import Footer from '../../component/footer'
