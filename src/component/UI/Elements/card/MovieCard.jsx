@@ -4,10 +4,15 @@ import { FaStar, FaPlay, FaCheck  } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import formatwaktu from '../../../../utils/formatwaktu';
 import { useState } from "react";
+ 
+import SeriesModal from '../SeriesModal';
 import FilmmModal from '../FilmModal';
+import { useLocation } from 'react-router-dom';
 const MovieCard = (props) => {
+  let location = useLocation();
   const { style, index, type, title, image, rating, eps, duration, progress, totaleps, category, label } = props;
   const [isHovered, setIsHovered] = useState(false);
+  const pathSegment = location.pathname.split('/')[1];
   const handleHover = (hover) => {
     setOpen(false)
     setIsHovered(hover)
@@ -28,9 +33,15 @@ const MovieCard = (props) => {
       className="relative h-full"
       onMouseEnter={() => handleHover(true)}
       onMouseLeave={() => handleHover(false)}
-    >
-     <FilmmModal open={open} handleClose={handleClose} title={title} image={image} >
-      </FilmmModal>
+    > 
+      {(pathSegment === "films" || pathSegment === "") && 
+           <FilmmModal open={open} handleClose={handleClose} title={title} image={image} >
+           </FilmmModal>
+      }
+     {pathSegment === "series" && 
+           <SeriesModal open={open} handleClose={handleClose} title={title} image={image} >
+           </SeriesModal>
+      }
       <div className={`h-full object-cover transition-transform duration-300 ${style === "box-panjang" ? isHovered ? 'scale-[120%] translate-y-[-60%]' : '' : isHovered ? 'scale-[110%] translate-y-[-50%]' : ''} ${index === 0 && isHovered && 'translate-x-[5%]'}`}>
         <div className={`relative w-full h-full transition-transform origin-bottom duration-300 ${style === "box-panjang" && isHovered && 'w-full scale-y-[65%]'}`}>
           {label === "Top 10" && <span className="absolute top-0 right-2 p-2 w-8 h-18 rounded-md text-center bg-[#B71F1D] text-white text-xs text-center font-bold">{label}</span>}
