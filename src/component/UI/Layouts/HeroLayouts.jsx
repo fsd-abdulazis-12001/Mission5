@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { IoVolumeMute } from "react-icons/io5";
-import GenreDropdown from '../../../component/UI/Elements/Dropdown/GenreDropDown';
+import GenreDropdown from '../Elements/Dropdown/GenreDropDown';
 const HeroLayouts = ({bgimage , title, description , genres}) => {
   return (
     <div className="relative bg-gray-900 text-white h-[587px]">
