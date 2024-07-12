@@ -1,5 +1,3 @@
-
-
 import Header from '../../component/header';
 import Footer from '../../component/footer';
 import CardsLayouts from '../../component/UI/Layouts/CardsLayouts';
