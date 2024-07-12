@@ -3,7 +3,7 @@ import Logonya from '../../component/UI/Elements/logo';
 import { FaUser, FaStar, FaSignOutAlt } from 'react-icons/fa';
 import profilelogo from '../../assets/img/icon/profile.png';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

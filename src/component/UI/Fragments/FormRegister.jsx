@@ -4,7 +4,7 @@ import React , { useState } from 'react'
 import googleIcon from '../../../assets/img/icon/google.png';
 import InputForm from '../Elements/InputAuth';
 import Button from '../Elements/Button';
-import {Link, Navigate} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom';
 
 const FormRegister = () => {
   const [user, setUser] = useState(false)

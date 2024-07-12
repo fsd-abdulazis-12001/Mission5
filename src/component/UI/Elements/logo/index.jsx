@@ -1,5 +1,5 @@
-import logo from '../../../../assets/img/logo/movie-open.png'
-import {Link} from "react-router-dom"
+import logo from '../../../../assets/img/logo/movie-open.png';
+import {Link} from "react-router-dom";
 const index = ({height , wdith, center}) => {
 
 

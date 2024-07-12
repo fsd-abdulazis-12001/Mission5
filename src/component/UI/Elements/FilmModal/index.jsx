@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import DaftarSayaFragments from '../../Fragments/DaftarSayaFragments'
-import CardThumbnail from '../../Elements/Card/CardThumbnail' 
+import DaftarSayaFragments from '../../Fragments/DaftarSayaFragments';
+import CardThumbnail from '../../Elements/Card/CardThumbnail' ;
 import filmDetails  from '../../../constants/filmDetails';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';

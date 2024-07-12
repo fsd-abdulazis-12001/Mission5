@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import PaketCard from '../Elements/Card/PaketCard'
+import PaketCard from '../Elements/Card/PaketCard';
 const SubscriptionList = () => {
   return (
     <div className='w-full h-auto bg-[#22282A] flex flex-col justify-center items-center gap-5 p-10' >

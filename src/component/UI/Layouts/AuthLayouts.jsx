@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import Logonya from '../Elements/logo';
-import BgImage from '../../../assets/img/bg/bg-masuk.jpeg'
+import BgImage from '../../../assets/img/bg/bg-masuk.jpeg';
 const AuthLayouts = (props) => {
 const {children, title, description} = props
   return (

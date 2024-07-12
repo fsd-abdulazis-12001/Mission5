@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import Input from "./Input"
-import Label from "./Label"
+import Input from "./Input";
+import Label from "./Label";
 
  
 const Index = (props) => {
