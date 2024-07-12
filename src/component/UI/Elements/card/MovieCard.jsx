@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import React  from 'react'
+import React , { useState }  from 'react'
 import { FaStar, FaPlay, FaCheck  } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import formatwaktu from '../../../../utils/formatwaktu';
-import { useState } from "react";
+
 import { useNavigate } from 'react-router-dom';
 import SeriesModal from '../SeriesModal';
 import FilmmModal from '../FilmModal';
