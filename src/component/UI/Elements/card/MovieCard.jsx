@@ -4,12 +4,13 @@ import { FaStar, FaPlay, FaCheck  } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import formatwaktu from '../../../../utils/formatwaktu';
 import { useState } from "react";
- 
+import { useNavigate } from 'react-router-dom';
 import SeriesModal from '../SeriesModal';
 import FilmmModal from '../FilmModal';
 import { useLocation } from 'react-router-dom';
 const MovieCard = (props) => {
   let location = useLocation();
+  const Navigate = useNavigate();
   const { style, index, type, title, image, rating, eps, duration, progress, totaleps, category, label } = props;
   const [isHovered, setIsHovered] = useState(false);
   const pathSegment = location.pathname.split('/')[1];
@@ -67,7 +68,7 @@ const MovieCard = (props) => {
               <div className="flex flex-row items-center gap-4">
                 <div
                   className="cursor-pointer w-8 h-8 lg:w-10 lg:h-10 bg-white rounded-full flex items-center justify-center transition hover:bg-neutral-300"
-                  onClick={() => { }}
+                  onClick={() => { Navigate(`/videoplayer`) }}
                 >
                   <FaPlay className="text-black w-4 h-4" />
                 </div>

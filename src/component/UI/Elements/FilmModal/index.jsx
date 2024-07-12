@@ -15,18 +15,15 @@ const index = ({handleClose, open}) => {
           aria-describedby="transition-modal-description"
            keepMounted 
            className='overflow-scroll flex justify-center items-start rounded-md space-y-[10%] '
-           
           >
            <Fade in={open}>
-
-             
               <div className='absolute flex-col justify-center items-start space-y-4 bg-[#181A1C] lg:w-[50%] w-[90%] rounded-md '>
                 <div className='relative w-full h-[554px] '>
                     <img src="/img/thumbnail/PreviewSeries/tn1.png" alt="" className='w-full h-full object-cover'/>
+
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181A1C] to-transparent h-full">
-      
                     </div>
-                   
+            
                 </div>
 
                 <div className='relative w-full lg:h-[224px] h-[696px] flex flex-col space-y-3 justify-start items-center '>
