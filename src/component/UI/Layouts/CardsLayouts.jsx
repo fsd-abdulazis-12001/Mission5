@@ -13,7 +13,7 @@ const CardsLayouts = ({title , children, height , amount}) => {
     <div className='flex flex-col w-11/12'>
       <h2 className="text-2xl font-bold text-left pt-3">{title}</h2>
       <div className='relative flex flex-row items-center justify-between h-[80%] pt-4'>
-      <div className="overflow-y-visible overflow-x-clip h-full ">
+      <div className="overflow-y-visible overflow-x-clip h-full min-w-0">
       
       <Swiper
         breakpoints={{
