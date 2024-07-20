@@ -3,7 +3,7 @@
 import FormLogin from "../../component/UI/Fragments/FormLogin";
 const Index = () => {
   return (
-   <AuthLayouts title="Login" description="Selamat datang kembali!"> 
+   <AuthLayouts title="Login" description="datang kembali!"> 
      <FormLogin/>
    </AuthLayouts>
   );
