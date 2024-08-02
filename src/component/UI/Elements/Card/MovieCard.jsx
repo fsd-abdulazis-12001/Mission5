@@ -3,15 +3,17 @@ import React , { useState }  from 'react'
 import { FaStar, FaPlay, FaCheck  } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import formatwaktu from '../../../../utils/formatwaktu';
-
+import useDaftarSayaStore from '../../../stores/daftarsaya/useDaftarSayaStore';
 import { useNavigate } from 'react-router-dom';
 import SeriesModal from '../SeriesModal';
 import FilmmModal from '../FilmModal';
 import { useLocation } from 'react-router-dom';
+ 
 const MovieCard = (props) => {
   let location = useLocation();
   const Navigate = useNavigate();
   const { style, index, type, title, image, rating, eps, duration, progress, totaleps, category, label } = props;
+  const addDaftarSaya  = useDaftarSayaStore(state=>state.addDaftarSaya)
   const [isHovered, setIsHovered] = useState(false);
   const pathSegment = location.pathname.split('/')[1];
   const handleHover = (hover) => {
@@ -74,7 +76,10 @@ const MovieCard = (props) => {
                 </div>
                 <div
                   className="cursor-pointer w-8 h-8 lg:w-10 lg:h-10 bg-opacity-0 rounded-full border flex items-center justify-center transition hover:bg-gray-300"
-                  onClick={() => { }}
+                  onClick={() => { 
+                    addDaftarSaya(title, image)
+                    
+                   }} 
                 >
                   <FaCheck className="text-white" />
                 </div>

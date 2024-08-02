@@ -1,4 +1,4 @@
-const topRatingFilmAndMovies = [
+const daftarSaya = [
         {  title: "Suzume", image: "/img/thumbnail/DaftarSaya/tn1.png", neweps :  true, top10 : false},
         {  title: "Jurassik World", image: "/img/thumbnail/DaftarSaya/tn2.png", neweps :  false, top10 : false},
         {  title: "Sonic", image: "/img/thumbnail/DaftarSaya/tn3.png",neweps :  true, top10 : false},
@@ -15,4 +15,4 @@ const topRatingFilmAndMovies = [
       ]
   
 
-export default topRatingFilmAndMovies
+export default daftarSaya
