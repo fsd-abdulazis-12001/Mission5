@@ -43,11 +43,11 @@ const CardsLayouts = ({title , children, height , amount}) => {
         className="flex justify-center gap-2 h-full" 
       >
        {children}
-       <div className="swiper-button-prev flex items-center justify-center invisible sm:visible">
-        <FaArrowLeft className='pl-2' />
+       <div className="swiper-button-prev relative flex items-center justify-center invisible sm:visible">
+        <FaArrowLeft className='absolute z-100 text-white' />
        </div>
-       <div className="swiper-button-next flex items-center justify-center invisible sm:visible">
-        <FaArrowRight className='pl-2' />
+       <div className="swiper-button-next relative flex items-center justify-center invisible sm:visible">
+        <FaArrowRight className='absolute z-100 text-white' />
        </div>
       </Swiper>
     

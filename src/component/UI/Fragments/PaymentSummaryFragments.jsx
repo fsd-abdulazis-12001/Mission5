@@ -9,7 +9,7 @@ const PaymentSummary = () => {
       const {id} = useParams();
   return (
 
-    // MAAF KAK SUDAH MEPET WAKTUNYA SAMA MATA UDAH PERIH, AGAK BERANTAKAN PAGE YANG INI GAK DIPECAH
+    // MAAF KAK , AGAK BERANTAKAN PAGE YANG INI GAK BUT COMPONENT ELEMENTNYA
     <div className="flex flex-col items-center bg-[#181A1C] text-white p-6 space-y-6">
     
       <div className=" w-[95%] p-6">
