@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from 'react'
-import { IoVolumeMute } from "react-icons/io5";
+import React, { useState } from 'react'
+import { IoVolumeMute,IoVolumeHigh } from "react-icons/io5";
 import GenreDropdown from '../Elements/Dropdown/GenreDropDown';
 const HeroLayouts = ({bgimage , title, description , genres}) => {
+  const [isMuted, setIsMuted] = useState(false);
   return (
     <div className="relative bg-gray-900 text-white h-[587px]">
     <img
@@ -40,7 +41,12 @@ const HeroLayouts = ({bgimage , title, description , genres}) => {
             </button>
             <span className="bg-gray-700 text-white py-1 px-2 rounded-full bg-opacity-0  border border-gray-700 ">18+</span>
           </div>
-          <IoVolumeMute className="text-white text-2xl ml-auto rounded-full " />
+          {!isMuted ? (
+            <IoVolumeHigh className="text-white text-2xl ml-auto rounded-full cursor-pointer" onClick={() => setIsMuted(!isMuted)}/>
+          ) : (
+            <IoVolumeMute className="text-white text-2xl ml-auto rounded-full cursor-pointer" onClick={() => setIsMuted(!isMuted)}/>
+          )}
+          
         </div>
       </div>
     </div>

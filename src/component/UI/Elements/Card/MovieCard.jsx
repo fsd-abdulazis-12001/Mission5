@@ -13,7 +13,7 @@ import { useLocation } from 'react-router-dom';
 const MovieCard = (props) => {
   let location = useLocation();
   const Navigate = useNavigate();
-  const { style, index, type, title, image, rating, eps, duration, progress, totaleps, category, label } = props;
+  const { style, index, type, title, image, rating, eps, duration, progress, totaleps, category, label, top10, neweps} = props;
   const addDaftarSaya  = useDaftarSayaStore(state=>state.addDaftarSaya)
 
   const [isHovered, setIsHovered] = useState(false);
@@ -44,7 +44,7 @@ const MovieCard = (props) => {
   };
   const handleAgreConfirm = () => {
     
-    addDaftarSaya(title, image)
+    addDaftarSaya(title, image,top10,neweps)
     handleCloseConfirm()
   };
   return (

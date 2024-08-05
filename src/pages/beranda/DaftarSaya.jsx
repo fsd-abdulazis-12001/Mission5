@@ -19,7 +19,8 @@ const DaftarSaya = () => {
       <DaftarSayaFragments title="Daftar Saya">
       {listdaftarsaya.length > 0 ? (
         listdaftarsaya.map((movie, index) => ( 
-          <CardThumbnail key={index} {...movie} id={movie.id}/>
+          <CardThumbnail key={index} {...movie}/>
+       
         ))
       ) : (
         <p>Tidak ada film yang ditambahkan</p>

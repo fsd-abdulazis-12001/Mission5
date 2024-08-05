@@ -20,6 +20,7 @@ const CardThumbnail = ({id, image, top10, neweps, title}) => {
   const handleCloseConfirm = () => {
     setOpenConfirm(false);
   };
+   
   return (
     <>
         <DialogModal openConfirm={openConfirm} onClose={handleCloseConfirm} handleAgreConfirm={() => {removeDaftarSaya(id) 
