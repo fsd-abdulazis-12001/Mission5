@@ -30,6 +30,23 @@ export const Notification =  (message, type) => {
         transition: Bounce,
         });
     }
+    else if (type === "promise"){
+      const resolveAfter1Sec = new Promise(resolve => setTimeout(resolve, 1000));
+      toast.promise(
+          resolveAfter1Sec,
+          {
+         
+            pending: 'Tunggu sebentar...',
+            success:  `${message} 👌`,
+            error: 'Promise rejected 🤯',
+            theme: "colored",
+          },
+          {
+            position: "top-center",
+            autoClose: 2000,
+          }
+      )
+    }
   
      
 }

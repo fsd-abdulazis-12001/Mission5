@@ -7,13 +7,15 @@ import useDaftarSayaStore from '../../../stores/daftarsaya/useDaftarSayaStore';
 import { useNavigate } from 'react-router-dom';
 import SeriesModal from '../SeriesModal';
 import FilmmModal from '../FilmModal';
+import DialogModal from '../DialogModal';
 import { useLocation } from 'react-router-dom';
- 
+
 const MovieCard = (props) => {
   let location = useLocation();
   const Navigate = useNavigate();
   const { style, index, type, title, image, rating, eps, duration, progress, totaleps, category, label } = props;
   const addDaftarSaya  = useDaftarSayaStore(state=>state.addDaftarSaya)
+
   const [isHovered, setIsHovered] = useState(false);
   const pathSegment = location.pathname.split('/')[1];
   const handleHover = (hover) => {
@@ -28,7 +30,23 @@ const MovieCard = (props) => {
     setOpen(false)
     setIsHovered(false)
   };
+  const [openConfirm, setOpenConfirm] = useState(false);
 
+  const handleClickOpenConfirm = () => {
+   
+    setOpenConfirm(true);
+    console.log(openConfirm)
+  };
+
+  const handleCloseConfirm = () => {
+    setOpenConfirm(false);
+    handleHover(false)
+  };
+  const handleAgreConfirm = () => {
+    
+    addDaftarSaya(title, image)
+    handleCloseConfirm()
+  };
   return (
     
     <div
@@ -37,6 +55,12 @@ const MovieCard = (props) => {
       onMouseEnter={() => handleHover(true)}
       onMouseLeave={() => handleHover(false)}
     > 
+     
+    <DialogModal openConfirm={openConfirm} onClose={handleCloseConfirm} handleAgreConfirm={handleAgreConfirm} title={title} image={image} modalTitle={`Tambahkan ${title} ke Daftar Kamu?`}>
+     
+    </DialogModal>
+ 
+
       {(pathSegment === "films" || pathSegment === "") && 
            <FilmmModal open={open} handleClose={handleClose} title={title} image={image} >
            </FilmmModal>
@@ -76,10 +100,7 @@ const MovieCard = (props) => {
                 </div>
                 <div
                   className="cursor-pointer w-8 h-8 lg:w-10 lg:h-10 bg-opacity-0 rounded-full border flex items-center justify-center transition hover:bg-gray-300"
-                  onClick={() => { 
-                    addDaftarSaya(title, image)
-                    
-                   }} 
+                  onClick={() => {handleClickOpenConfirm()}} 
                 >
                   <FaCheck className="text-white" />
                 </div>
