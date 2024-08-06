@@ -64,7 +64,7 @@ const index = ({handleClose, open}) => {
                   
                      <DaftarSayaFragments title="Rekomendasi Serupa">
                         { filmDetails.map((movie, index)=>(
-                            <CardThumbnail key={index} {...movie}/>
+                            <CardThumbnail key={index} {...movie} ignore = {true}/>
                         ))}
                       
                     </DaftarSayaFragments>
